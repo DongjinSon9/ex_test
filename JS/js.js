@@ -1,17 +1,18 @@
-document.getElementById("profile-pic").addEventListener("click", function () {
-    var dropMenu = document.getElementById("drdmenu");
-    if (dropMenu.style.display === "block") {
-        dropMenu.style.display = "none";
-    } else {
-        dropMenu.style.display = "block";
-    }
-});
-
-// 프로필 사진 이외의 다른 곳을 클릭하면 드롭다운 메뉴가 닫히도록 설정합니다.
-document.addEventListener("click", function (event) {
-    var dropMenu2 = document.getElementById("drdmenu");
+document.addEventListener("DOMContentLoaded", function () {
     var profilePic = document.getElementById("profile-pic");
-    if (event.target !== dropMenu2 && event.target !== profilePic) {
-        dropMenu2.style.display = "none";
-    }
+    var dropdownContent = document.getElementById("dropdown-content");
+
+    // 프로필 이미지를 클릭할 때 드롭다운 메뉴를 토글합니다.
+    profilePic.addEventListener("click", function () {
+        dropdownContent.classList.toggle("show");
+    });
+
+    // 화면 어느 곳을 클릭하더라도 드롭다운 메뉴가 열려있다면 닫습니다.
+    window.addEventListener("click", function (event) {
+        if (!event.target.matches("#profile-pic")) {
+            if (dropdownContent.classList.contains("show")) {
+                dropdownContent.classList.remove("show");
+            }
+        }
+    });
 });
