@@ -55,10 +55,11 @@ h1 {
     height: 100px;
     margin: 0;
     margin-top: 12px;
+    margin-right: 100px;
 }
 
 h2 {
-    padding-bottom: 20px;
+    padding: 20px 0 40px 20px;
     margin: 0;
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
@@ -70,6 +71,11 @@ h3 {
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #grid1 {
@@ -86,7 +92,8 @@ h3 {
 
 #todaym {
     position: relative;
-    top: 20px;
+    top: 10px;
+    padding: 20px 0 20px 0;
 }
 
 #todaymn {
@@ -104,7 +111,11 @@ h3 {
     height: 300px;
 }
 
-
+#nextmenu {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
@@ -154,4 +165,67 @@ h3 {
 
 .show {
     display: block;
+}
+
+#loginwindow {
+    width: 700px;
+    height: 500px;
+    background-color: rgb(160, 236, 160);
+    position: relative;
+    margin: 0;
+    position: absolute; /* 상위 요소에 대해 절대적으로 위치를 설정 */
+    top: 50%; /* 상위 요소의 중앙으로부터 수직으로 50% 위치 */
+    left: 50%; /* 상위 요소의 중앙으로부터 수평으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 작은 사각형의 중심이 상위 요소의 중심으로 정렬되도록 조정 */
+}
+
+#loginbg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 560px;
+    height: 300px;
+    background-color: white;
+    position: absolute; /* 상위 요소에 대해 절대적으로 위치를 설정 */
+    top: 50%; /* 상위 요소의 중앙으로부터 수직으로 50% 위치 */
+    left: 50%; /* 상위 요소의 중앙으로부터 수평으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 작은 사각형의 중심이 상위 요소의 중심으로 정렬되도록 조정 */
+}
+
+#loginlogo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: rgb(214, 243, 207);
+    margin: 60px 0 0 60px;
+}
+
+#login {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#loginemail, #loginpw {
+    width: 230px;
+    height: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#jointo {
+    font-size: 14px;
+    color: rgb(170, 165, 165);
+    margin-left: 15px;
+}
+
+#loginbutton {
+    margin-left: 75px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 11%;
+    background-color: rgb(52, 152, 219);
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
 }

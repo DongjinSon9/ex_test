@@ -12,24 +12,22 @@
 </script>
 
 <body>
-    <header>
-        <div id="grid1">
-            <a href="index.html">
-                <img src="image/밥지도-logo.png" id="mealmap">
-            </a>
-            <h1><a href="index.html">밥 지도</a></h1>
-            <div class="profile-container">
-                <div class="dropdown">
-                    <img src="image/user_profile.png" alt="프로필 이미지" class="profile-pic" id="profile-pic">
-                    <div class="dropdown-content" id="dropdown-content">
-                        <a href="login.html">로그인</a>
-                        <a href="join.html">회원가입</a>
-                        <a href="#">회원탈퇴</a>
+    <div id="loginwindow">
+        <div id="loginbg">
+            <a href="index.html"><img src="image/logo.png" id="loginlogo"></a>
+            <form action="index.html">
+                <div id="loginall">
+                    <h4>로그인</h4>
+                    <div id="login">
+                        <input type="email" id="loginemail" placeholder="이메일">
+                        <input type="password" id="loginpw" placeholder="비밀번호">
                     </div>
-                </div>
-            </div>
+                    <a id="jointo" href="join.html">회원가입</a>
+                    <button type="submit" value="로그인" id="loginbutton">로그인</button>
+            </form>
         </div>
-    </header>
+    </div>
+    </div>
 </body>
 
 </html>
