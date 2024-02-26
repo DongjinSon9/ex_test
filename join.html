@@ -5,10 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <link rel="stylesheet" href="CSS/css.css">
 </head>
 
+<script src="JS/js.js"></script>
+
 <body>
-회원가입 페이지 (제작 중)
+    <header>
+        <div id="grid1">
+            <a href="index.html"><img src="image/밥지도-logo.png" id="mealmap"></a>
+            <h1><a href="index.html">밥 지도</a></h1>
+            <div class="profile-container">
+                <div class="dropdown">
+                    <img src="image/user_profile.png" alt="프로필 이미지" class="profile-pic" id="profile-pic">
+                    <div class="dropdown-content" id="dropdown-content">
+                        <a href="login.html">로그인</a>
+                        <a href="join.html">회원가입</a>
+                        <a href="#">회원탈퇴</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="joinall">
+        <side id="joinside">
+            <div id="picgroup">
+                <img src="image/user_profile.png" id="join_pic">
+                <input type="file" value="사진 선택" id="pic_select">
+            </div>
+        </side>
+        <div id="joinbg">
+            <form id="joinform">
+                <div>
+                이 메 일<input type="email" id="jemail"><br>
+                닉 네 임<input type="text" id="nickname"><br>
+                비밀번호<input type="password" id="jpass"><br>
+                확인입력<input type="password" id="jpass2">
+                </div>
+                <button type="submit" value="회원가입" id="joinbt">회원가입</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
